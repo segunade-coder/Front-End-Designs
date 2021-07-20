@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; font-family: 'Century Gothic'; margin-top: -30px; color: rgba(236, 95, 201, 0.5);}
+    .attribution a { color: hsl(0, 1%, 64%); }
+    body{
+      background-color: hsl(235, 31%, 15%);
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      background-color: hsl(244, 29%, 20%);
+      width: 90%;
+      height: fit-content;
+      margin: 80px auto;
+      border-radius: 10px;
+    }
+    section.img{
+      width: 100%;
+      height:249px; 
+      background:linear-gradient(to right, hsla(277, 60%, 65%, 0.6), hsla(277, 60%, 65%, 0.6)), url(./images/image-header-mobile.jpg) no-repeat;
+      background-size: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    section .content{
+      width: 100%;
+      height: fit-content;
+      font-family: 'Franklin Gothic';
+      
+      
+    }
+    section .content > p:first-child{
+      color: white;
+      font-size: 1.7em;
+      width: 70%;
+      margin: 30px auto 10px auto;
+      text-align: center;
+    }
+    section .content > p:nth-child(2){
+      color: rgb(185, 183, 183);
+      font-size: .955em;
+      width: 70%;
+      margin: 0px auto 30px auto;
+      text-align: center;
+      line-height: 25px;
+    }
+
+    div.ads{
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Arial';
+    }
+    .ads > div{
+      font-size: 1.6em;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .ads > div span{
+      font-size: .4em;
+      font-weight: normal;
+      font-family: "Century Gothic";
+      text-transform: uppercase;
+      color: rgb(180, 178, 178);
+    }
+    /* media query  */
+    @media  (min-width: 700px){ 
+      body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .container{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 80%;
+      }
+      section.img{
+        flex-shrink: 1;
+        flex-grow: 3;
+        width: 100%;
+        height: 100%;
+        background:linear-gradient(to right, hsla(277, 60%, 65%, 0.6), hsla(277, 60%, 65%, 0.6)), url(./images/image-header-desktop.jpg) no-repeat;
+        border-radius: 0;
+        border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+        background-size: cover;
+        background-position:top;
+      }
+      section.main{
+        display: flex;
+        width: 100%;
+        flex-shrink: 1;
+        /* flex-grow: 10; */
+      }
+      section .content{
+        flex-shrink: 5;
+        width: 90%;
+        margin:60px;
+      }
+      section .content > p:first-child, section .content > p:nth-child(2) {
+        margin: 0;
+        margin-bottom: 20px;
+        text-align: left;
+        width: 90%;
+      }
+      section .content > p:first-child{
+        font-size:2.2em;
+      }
+      section .content > p:nth-child(2){
+        font-size: .999em;
+        line-height: 28px;
+      }
+      div.ads{
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 50px;
+      }
+      .ads > div {
+        margin: 0;
+        font-size: 1.3em;
+        flex-grow: 1;
+        flex-shrink: 5;
+        text-align: left;
+        font-weight: 520;
+        font-size: 2rem;
+      }
+      /* .ads > div span{ */
+
+      /* } */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <section class="img">
+  </section>
+  <section class="main">
+  <main class="content">
+   <p>Get <span style="color:hsl(277, 64%, 61%);">insights</span> that help your business grow.</p>
+   
+   <p> Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+     experience, and overall efficiency.</p>
+     <div class="ads">
+      <div>10k+ <br> <span>Companies</span></div>
+      <div>314 <br> <span>Template</span></div>
+      <div>12M+ <br> <span>Queries</span></div>
+     </div>
+    </main>
+  </section>
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Teejay</a>.
+  </div>
+</body>
+</html>
